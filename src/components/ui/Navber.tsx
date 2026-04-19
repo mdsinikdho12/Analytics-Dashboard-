@@ -15,7 +15,7 @@ const Navbar: React.FC = () => {
   return (
     <nav
       className="sticky top-0 z-50 px-6 py-4 flex items-center justify-between 
-                    bg-white/30 backdrop-blur-md border-b border-white/20 shadow-sm">
+                    bg-[#EDF0F6]">
       {/* Logo */}
       <div className="flex items-center gap-2 group cursor-pointer">
         <span className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-gray-900 to-gray-600">
@@ -23,7 +23,7 @@ const Navbar: React.FC = () => {
         </span>
       </div>
 
-      {/* Desktop Navigation - Glass Pill Design */}
+      {/*  */}
       <div
         className="hidden lg:flex items-center bg-white/40 backdrop-blur-xl 
                       border border-white/40 rounded-[2rem] p-1.5 shadow-inner">
@@ -41,7 +41,7 @@ const Navbar: React.FC = () => {
         ))}
       </div>
 
-      {/* Right Side - Liquid Buttons */}
+      {/* button */}
       <div className="flex items-center gap-3">
         <div className="hidden md:flex items-center gap-3">
           <button
@@ -58,7 +58,7 @@ const Navbar: React.FC = () => {
           </button>
         </div>
 
-        {/* Profile with Glass Ring */}
+        {/* Profile icon */}
         <div className="p-0.5 rounded-2xl bg-gradient-to-tr from-white/80 to-transparent shadow-md">
           <div className="w-10 h-10 rounded-2xl overflow-hidden border border-white/20">
             <img
@@ -69,7 +69,7 @@ const Navbar: React.FC = () => {
           </div>
         </div>
 
-        {/* Mobile Toggle */}
+        {/* hamberger icon */}
         <button
           className="lg:hidden p-2 text-gray-800 hover:bg-white/40 rounded-xl transition-colors"
           onClick={() => setIsOpen(!isOpen)}>
@@ -77,7 +77,7 @@ const Navbar: React.FC = () => {
         </button>
       </div>
 
-      {/* Mobile Glass Menu */}
+      {/* Mobile  Menu */}
       {isOpen && (
         <div
           className="absolute top-[calc(100%+10px)] left-4 right-4 bg-white/70 backdrop-blur-2xl 
