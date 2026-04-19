@@ -1,6 +1,7 @@
 import React from "react";
 import StatsCard from "../ui/StatsCard";
 import { useGetDashbordDataQuery } from "../../features/dashbord/dashboardApi";
+import ScheduleCard from "../ui/ScheduleCard";
 
 const Stats: React.FC = () => {
   const { data, isLoading, isError } = useGetDashbordDataQuery();
@@ -11,19 +12,18 @@ const Stats: React.FC = () => {
   const overview = data?.overview;
 
   return (
-    <section className="grid grid-cols-3 gap-10 mt-10 items-start">
-      <div className="col-span-2 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
-        {/* sorry for that we cannot map this data for this api response*/}
-
+    <section className="grid grid-cols-1 lg:grid-cols-3 gap-10 mt-10 items-start px-4">
+      <div className="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         <StatsCard
           title="Total Employees"
           disc="Active Staff"
           count={overview?.totalUsers?.toLocaleString() || "0"}
           growth={`+${overview?.growth || 0}%`}
         />
+
         <StatsCard
-          title="ActiveUsers"
-          disc="Active user"
+          title="Active Users"
+          disc="Active User"
           count={overview?.activeUsers?.toLocaleString() || "0"}
           growth={`+${overview?.growth || 0}%`}
         />
@@ -43,9 +43,8 @@ const Stats: React.FC = () => {
         />
       </div>
 
-      <div className="h-[400px] bg-white rounded-[32px] shadow-sm border border-gray-100 p-6">
-        <h2 className="font-bold text-xl">Schedule</h2>
-        <p className="text-gray-400 mt-4">Upcoming events will appear here.</p>
+      <div className="lg:col-span-1 w-full">
+        <ScheduleCard />
       </div>
     </section>
   );
