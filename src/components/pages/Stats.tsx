@@ -2,6 +2,7 @@ import React from "react";
 import StatsCard from "../ui/StatsCard";
 import { useGetDashbordDataQuery } from "../../features/dashbord/dashboardApi";
 import ScheduleCard from "../ui/ScheduleCard";
+import Tracker from "../charts/Tracker";
 
 const Stats: React.FC = () => {
   const { data, isLoading, isError } = useGetDashbordDataQuery();
@@ -41,6 +42,8 @@ const Stats: React.FC = () => {
           count={`$${overview?.revenue?.toLocaleString() || "0"}`}
           growth="+12%"
         />
+
+        <Tracker />
       </div>
 
       <div className="lg:col-span-1 w-full">
