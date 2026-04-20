@@ -3,6 +3,7 @@ import StatsCard from "../ui/StatsCard";
 import { useGetDashbordDataQuery } from "../../features/dashbord/dashboardApi";
 import ScheduleCard from "../ui/ScheduleCard";
 import Tracker from "../charts/Tracker";
+import AnalyticsChart from "../charts/ProgressChart";
 
 const Stats: React.FC = () => {
   const { data, isLoading, isError } = useGetDashbordDataQuery();
@@ -13,8 +14,8 @@ const Stats: React.FC = () => {
   const overview = data?.overview;
 
   return (
-    <section className="grid grid-cols-1 lg:grid-cols-3 gap-10 mt-10 items-start px-4">
-      <div className="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+    <section className="grid grid-cols-1 lg:grid-cols-3 gap-6 mt-10 items-start px-4">
+      <div className="lg:col-span-2 grid grid-cols-1 md:grid-cols-4 gap-6">
         <StatsCard
           title="Total Employees"
           disc="Active Staff"
@@ -43,10 +44,16 @@ const Stats: React.FC = () => {
           growth="+12%"
         />
 
-        <Tracker />
+        <div className="md:col-span-2">
+          <Tracker />
+        </div>
+
+        <div className="md:col-span-2">
+          <AnalyticsChart data={data?.analytics || []} />
+        </div>
       </div>
 
-      <div className="lg:col-span-1 w-full">
+      <div className="lg:col-span-1 h-full">
         <ScheduleCard />
       </div>
     </section>

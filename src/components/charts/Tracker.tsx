@@ -8,7 +8,9 @@ const Tracker: React.FC = () => {
   ];
 
   return (
-    <div className="bg-white p-6 rounded-[32px] w-full max-w-xs">
+    <div
+      className=" bg-white/20 backdrop-blur-xl border border-white/30 
+        shadow-[0_8px_32px_rgba(0,0,0,0.08)] transition-all duration-500 p-6 rounded-[32px] w-full max-w-xs">
       <div className="flex justify-between items-center mb-2">
         <h2 className="text-xl font-bold text-slate-800">Tracker</h2>
         <select className="text-xs bg-slate-50 border border-slate-200 rounded-lg px-2 py-1 outline-none text-slate-500">

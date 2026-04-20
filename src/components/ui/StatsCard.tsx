@@ -9,7 +9,9 @@ interface StatsProps {
 
 const StatsCard: React.FC<StatsProps> = ({ title, disc, count, growth }) => {
   return (
-    <div className="bg-white p-6 rounded-[32px]  border border-gray-50 flex flex-col gap-6 w-full max-w-sm">
+    <div
+      className=" bg-white/20 backdrop-blur-xl border border-white/30 
+        shadow-[0_8px_32px_rgba(0,0,0,0.08)] transition-all duration-500 p-6 rounded-[32px]   flex flex-col gap-6 w-full max-w-sm">
       <div className="flex items-center gap-3">
         <div className="p-2 bg-[#BAE5DE] rounded-xl text-slate-600">
           <Users className="text-[#045558]" size={24} strokeWidth={1.5} />
