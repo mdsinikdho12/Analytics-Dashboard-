@@ -1,4 +1,4 @@
-# Fast React Dashboard (Redux + TypeScript)
+#  React Dashboard (Redux + TypeScript)
 
 ![Dashboard Preview](https://res.cloudinary.com/dcn58au6s/image/upload/v1776791290/692shots_so_latgo7.png)
 
