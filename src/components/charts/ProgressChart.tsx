@@ -1,4 +1,3 @@
-import React from "react";
 import {
   ResponsiveContainer,
   BarChart,
@@ -28,7 +27,6 @@ interface FormattedData {
 }
 
 export default function AnalyticsChart({ data }: AnalyticsChartProps) {
-  // map function-e explicit type deya hoyeche
   const chartData: FormattedData[] = data.map((item) => ({
     date: new Date(item.date).toLocaleDateString("en-US", {
       month: "short",
