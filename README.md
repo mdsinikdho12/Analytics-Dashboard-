@@ -1,73 +1,91 @@
-# React + TypeScript + Vite
+# Fast React Dashboard (Redux + TypeScript)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Dashboard Preview](https://res.cloudinary.com/dcn58au6s/image/upload/v1776791290/692shots_so_latgo7.png)
 
-Currently, two official plugins are available:
+A high-performance, modern React dashboard built with **React 19**, **TypeScript**, and **Redux Toolkit**. This project focuses on clean architecture, scalable state management, and beautiful data visualization using Tailwind CSS and modern chart libraries.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+| Technology | Purpose |
+|---|---|
+| React 19 (Vite) | Frontend Framework |
+| TypeScript | Type-safe Development |
+| Redux Toolkit & RTK Query | State Management |
+| Tailwind CSS | Responsive & Modern UI |
+| Recharts & Nivo | Data Visualization |
+| Lucide React | UI Icons |
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Features
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- **Fast Performance** — Optimized build and development using Vite.
+- **Clean Architecture** — Well-organized folder structure for scalability.
+- **Type Safety** — Full TypeScript integration to minimize runtime errors.
+- **Data Visualization** — Interactive and responsive charts (Pie, Bar, Line).
+- **Fully Responsive** — Works perfectly on Desktop, Tablet, and Mobile.
+- **State Management** — Efficient data fetching and caching with RTK Query.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## Key Dependencies
+
+| Package | Purpose |
+|---|---|
+| `@reduxjs/toolkit` | Logic and state management |
+| `react-redux` | React bindings for Redux |
+| `@nivo/core` & `@nivo/pie` | Advanced data storytelling |
+| `recharts` | Simple and flexible charts |
+| `tailwindcss` | Utility-first styling |
+| `lucide-react` | Beautiful UI icons |
+
+---
+
+## Project Structure (Learning Goals)
+
+This project was built as a deep dive into:
+
+- [x] **Redux Toolkit** — Mastering complex state management.
+- [x] **TypeScript** — Implementing interfaces and types in a real-world app.
+- [x] **Chart Integration** — Handling dynamic data in visualization libraries.
+- [x] **RTK Query** — Streamlining API calls and server-state synchronization.
+
+---
+
+## Getting Started
+
+**1. Clone the repository:**
+
+```bash
+git clone https://github.com/your-username/your-repo-name.git
+cd your-repo-name
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+**2. Install dependencies:**
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
 ```
+
+**3. Start the development server:**
+
+```bash
+npm run dev
+```
+
+**4. Build for production:**
+
+```bash
+npm run build
+```
+
+---
+
+## Author
+
+**Sinikdho** — Passionate Developer | MERN Stack Learner
+
+- GitHub: [github](https://github.com/mdsinikdho)
+- LinkedIn: [sinikdho](https://linkedin.com/in/md-ferdousmahmud)
