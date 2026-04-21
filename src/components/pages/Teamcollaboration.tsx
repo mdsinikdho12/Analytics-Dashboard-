@@ -12,7 +12,7 @@ interface Props {
   data: Employee[];
 }
 
-const STATUS_CLS = {
+const STATUS_CLS: Record<"active" | "inactive", string> = {
   active: "bg-green-100 text-green-700",
   inactive: "bg-red-100 text-red-600",
 };
@@ -59,7 +59,7 @@ export default function EmployeesAwardList({ data }: Props) {
           </thead>
 
           <tbody>
-            {data.map((emp: any, index: number) => (
+            {data.map((emp: Employee, index: number) => (
               <tr
                 key={emp.id}
                 className="bg-white/40 backdrop-blur-md hover:bg-white/60 

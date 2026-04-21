@@ -1,12 +1,12 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
 export const dashbordApi = createApi({
-  reducerPath: "dasbordApi",
+  reducerPath: "dashboardApi",
   baseQuery: fetchBaseQuery({
     baseUrl: "https://task-api-eight-flax.vercel.app/api/",
   }),
   endpoints: (builder) => ({
-    getDashbordData: builder.query({
+    getDashbordData: builder.query<any, void>({
       query: () => "/dashboard",
     }),
   }),
